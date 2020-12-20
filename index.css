@@ -1,12 +1,34 @@
 body {
     background-color: lightblue;
 }
+/*page borders*/
+#top, #left {
+    position: fixed;
+}
+  #top {
+    background-color: rgb(0, 22, 117);
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 50px;
+  }
+  #left {
+    background-color: rgb(0, 10, 53);
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 8px;
+  }
 
 /*navigation bar*/
 .menu {
-    overflow: hidden;
-    background-color: black;
+    /*overflow: hidden;*/
+    background-color: rgb(0, 22, 117);
     font-family: sans-serif;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 8px;
+    min-height: 42px;
   }
   /*links*/
   .menu-button {
