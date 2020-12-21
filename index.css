@@ -2,7 +2,7 @@ body {
     background-color: #4690FF;
 }
 /*page borders*/
-#top, #left {
+#top, #left, #right {
     position: fixed;
 }
   #top {
@@ -12,27 +12,32 @@ body {
     right: 0;
     height: 50px;
   }
-  #left {
+  #left, #right {
     background-color: rgb(0, 10, 53);
     top: 0;
-    left: 0;
     bottom: 0;
     width: 8px;
+  }
+  #left {
+    left: 0;
+  }
+  #right {
+    right:0;
   }
 
 /*navigation bar*/
 .menu, .vertMenu {
     background-color: rgb(0, 22, 117);
     font-family: sans-serif;
-    position: -webkit-sticky;
-    position: sticky;
   }
   .menu{
     top: 8px;
     min-height: 42px;
+    position: -webkit-sticky;
+    position: sticky;
   }
   .vertMenu {
-    left: 8px;
+    right: 8px;
     width: 142px;
     height: 100%;
     position: fixed;
@@ -114,9 +119,21 @@ body {
   background-size: cover;
 }
 
+/*button to change grid on map*/
+#valleyMapButton {
+  font-size: 16px;
+  color: white;
+  background-color: rgb(0, 22, 117);
+  text-align: center;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  cursor: pointer;
+}
+
 /*Valley images*/
 #valleyImage {
-  width: 900px;
+  width: 80%;
   padding: 10px;
   border-radius: 4px;
   border-color: black;

@@ -3,11 +3,32 @@
     <head>
         <title>Valley</title>
         <link rel="stylesheet" type="text/css" href="index.css">
+        
+        <audio autoplay>
+            <source src="audio/Avatar Soundtrack - Epic Music Mix   Aang & Korra   The last Airbender - The Legend of Korra.mp3"
+            type="audio/mp3">
+        </audio>
+        <audio id="company" preload="auto" 
+            src="audio/Company Of Stars - Sci-fi Fantasy Music.mp3" >
+            <h2>Your browser does not support the audio element</h2>
+        </audio>
+        <audio id="trickster" preload="auto" 
+            src="audio/Trickster's Plan - Fantasy Viking Music.mp3" >
+            <h2>Your browser does not support the audio element</h2>
+        </audio>
+        <audio id="mogawr" preload="auto" 
+            src="audio/Leave the Depths (Morgawr) - Endless Legend Tempest Original Soundtrack.mp3" >
+            <h2>Your browser does not support the audio element</h2>
+        </audio>
+        <audio id="stones" preload="auto" 
+            src="audio/TES V Skyrim Soundtrack - Ancient Stones.mp3" >
+            <h2>Your browser does not support the audio element</h2>
+        </audio>
     </head>
     <script>
-        //var answer=prompt("password?");
-	    //    if(answer=="password") alert("welcome to the Valley of Tiamat");
-        //    else window.close('','_parent','');
+        var answer=prompt("password?");
+	        if(answer=="password") alert("Welcome to the Valley of Tiamat");
+            else window.close('','_parent','');
 
         function changeImage() {
             var Image_Id = document.getElementById('valleyImage');
@@ -18,28 +39,82 @@
                 Image_Id.src = "images/valleyGridv2.jpg";
             }
         }
+
+        function openMap() {
+            var code1=prompt("password?");
+            if (code1=="iroh") {
+                alert("Welcome to the Valley of Tiamat")
+                document.getElementById('mapDiv').style="display:block";
+            } else {
+                alert("nien");
+            }
+        }
+        function openFort() {
+            var code2=prompt("password?");
+            if (code2=="ancient stones") {
+                alert("You approach the fort, and a chill creeps down your spine...")
+                document.getElementById('fortDiv').style="display:block";
+            } else {
+                alert("nien");
+            }
+        }
+        function openStairs() {
+            var code2=prompt("password?");
+            if (code2=="titanium") {
+                alert("The Spirits Dissaprove")
+                document.getElementById('stairsDiv').style="display:block";
+            } else {
+                alert("nien");
+            }
+        }
     </script>
     <body>
-        
-        <div id="left" style="width:150px"></div>
-        <div id="top" style="height: 8px"></div>
-        <div id="left"></div>
+
+        <div id="right" style="width:150px"></div>
+        <div id="top" style="height: 8px; background-color: #4690FF"></div>
+        <div id="left" style="background-color: #4690FF"></div>
 
         <div class="vertMenu">
-            <a class="vertMenu-button" onclick="changeImage()">
-                Grid
+            <a class="vertMenu-button" onclick="openMap()">
+                Box 1
             </a>
-            <a class="vertMenu-button" onclick="changeImage(images/mapNoGridv2.jpg)">
-                No Grid
+            <a class="vertMenu-button" onclick="openFort()">
+                Box 2
+            </a>
+            <a class="vertMenu-button" onclick="openStairs()">
+                Box 3
+            </a>
+            <a class="vertMenu-button" onclick="document.getElementById('company').play();">
+                Music 1 - company
+            </a>
+            <a class="vertMenu-button" onclick="document.getElementById('trickster').play();">
+                Music 2 - trickster
+            </a>
+            <a class="vertMenu-button" onclick="document.getElementById('mogawr').play();">
+                Music 3 - mogawr
+            </a>
+            <a class="vertMenu-button" onclick="document.getElementById('stones').play();">
+                Music 3 - valley
             </a>
             <a class="vertMenu-button" href="index.html" target="_blank" rel="noopener noreferrer">
                 Back to main
             </a>
         </div>
 
-        <div class="parallax" style="height: 1000px; background-image: url(images/damSnow.jpg);"></div>
+        <div id="mapDiv" style="display:none">          <!--hides valley image and options until code is inputted-->
             <img id="valleyImage" src="images/valleyNoGridv2.jpg" alt="Image did not display">
-        <div class="parallax" style="height: 1000px; background-image: url(images/skyrimSnow.jpg);"></div>
+            <button id="valleyMapButton" onclick="changeImage()">Grid on/off</button>
+        </div>
+        <div class="parallax" style="height: 1000px; background-image: url(images/damSnow.jpg);"></div>
         
+        <div id="fortDiv" style="display:none;">          <!--hides valley image and options until code is inputted-->
+            <img id="valleyImage" src="images/fort-1608514091995-8356.jpg" alt="Image did not display">
+        </div>
+        <div class="parallax" style="height: 1000px; background-image: url(images/skyrimSnow.jpg);"></div>
+
+        <div id="stairsDiv" style="display:none;">          <!--hides valley image and options until code is inputted-->
+            <img id="valleyImage" src="images/pagoda.jpg" alt="Image did not display">
+        </div>
+        <div class="parallax" style="height: 1000px; background-image: url(images/snow-1608514122702-6084.jpg);"></div>
     </body>
 </html>
