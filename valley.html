@@ -2,23 +2,44 @@
 <html>
     <head>
         <title>Valley</title>
+        <link rel="stylesheet" type="text/css" href="index.css">
     </head>
     <script>
         //var answer=prompt("password?");
 	    //    if(answer=="password") alert("welcome to the Valley of Tiamat");
         //    else window.close('','_parent','');
-        
+
+        function changeImage() {
+            var Image_Id = document.getElementById('valleyImage');
+            if (Image_Id.src.match("images/valleyGridv2.jpg")) {
+                Image_Id.src = "images/valleyNoGridv2.jpg";
+            }
+            else {
+                Image_Id.src = "images/valleyGridv2.jpg";
+            }
+        }
     </script>
-    <body style="background-image: url(images/skyrimSnow.jpg);">
-        <div style="background-image: url(images/valleyGridv2.jpg);">
-            <button></button>
+    <body>
+        
+        <div id="left" style="width:150px"></div>
+        <div id="top" style="height: 8px"></div>
+        <div id="left"></div>
+
+        <div class="vertMenu">
+            <a class="vertMenu-button" onclick="changeImage()">
+                Grid
+            </a>
+            <a class="vertMenu-button" onclick="changeImage(images/mapNoGridv2.jpg)">
+                No Grid
+            </a>
+            <a class="vertMenu-button" href="index.html" target="_blank" rel="noopener noreferrer">
+                Back to main
+            </a>
         </div>
-        <button onclick="gridOn()">esfv</button>
-        <input type="button"
-            value="Grid"
-            onclick="document.body.style='background-image: url(images/valleyGridv2.png)';">
-        <input type="button"
-            value="No Grid"
-            onclick="document.body.style='background-image: url(images/valleyNoGridv2.png)';">    
+
+        <div class="parallax" style="height: 1000px; background-image: url(images/damSnow.jpg);"></div>
+            <img id="valleyImage" src="images/valleyNoGridv2.jpg" alt="Image did not display">
+        <div class="parallax" style="height: 1000px; background-image: url(images/skyrimSnow.jpg);"></div>
+        
     </body>
 </html>

@@ -1,5 +1,5 @@
 body {
-    background-color: lightblue;
+    background-color: #4690FF;
 }
 /*page borders*/
 #top, #left {
@@ -21,25 +21,40 @@ body {
   }
 
 /*navigation bar*/
-.menu {
-    /*overflow: hidden;*/
+.menu, .vertMenu {
     background-color: rgb(0, 22, 117);
     font-family: sans-serif;
     position: -webkit-sticky;
     position: sticky;
+  }
+  .menu{
     top: 8px;
     min-height: 42px;
   }
-  /*links*/
-  .menu-button {
-    float: left;
+  .vertMenu {
+    left: 8px;
+    width: 142px;
+    height: 100%;
+    position: fixed;
+    overflow: auto;
+
+  }
+
+/*links*/
+.menu-button, .vertMenu-button {
     font-size: 16px;
     color: white;
     background-color: inherit;
     text-align: center;
     padding: 12px 16px;
     text-decoration: none;
+    display: block;
+    cursor: pointer;
   }
+  .menu-button {
+    float: left;
+  }
+
   /*dropdown container*/
   .dropdown {
     float: left;
@@ -61,7 +76,7 @@ body {
     margin: 0;
   }
   
-  .menu a:hover, .dropdown:hover .dropdown-button {
+  .menu a:hover, .vertMenu a:hover, .dropdown:hover .dropdown-button {
     background-color: #4690FF;
   }
   /*dropdown*/
@@ -90,3 +105,19 @@ body {
   .dropdown:hover .dropdown-content {
     display: block;
   }
+
+  /*valley background with parallax effect*/
+.parallax {
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/*Valley images*/
+#valleyImage {
+  width: 900px;
+  padding: 10px;
+  border-radius: 4px;
+  border-color: black;
+}
